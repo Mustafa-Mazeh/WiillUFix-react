@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom'
 import { services } from '../data/content'
 
 export default function Services() {
+  // 1. Create a simple variable for your base path
+  const basePath = import.meta.env.BASE_URL;
+
   return (
     <div className="inner-page">
       <div className="container-xxl py-5">
         <div className="container">
-          <div
-            className="text-center mx-auto pb-4"
-            style={{ maxWidth: 600 }}
-          >
+          <div className="text-center mx-auto pb-4" style={{ maxWidth: 600 }}>
             <p className="fw-medium text-uppercase text-primary mb-2">Our Services</p>
             <h1 className="display-5 mb-4">We Provide Best Technical Support</h1>
           </div>
@@ -19,10 +19,15 @@ export default function Services() {
             {services.map((s) => (
               <div className="col-md-6 col-lg-4" key={s.title}>
                 <div className="service-item">
-                  <img className="img-fluid" src={`/img/${encodeURIComponent(s.img)}`} alt={s.title} />
+                  
+                  {/* 2. Add basePath right before your img folder */}
+                  <img className="img-fluid" src={`${basePath}img/${encodeURIComponent(s.img)}`} alt={s.title} />
+                  
                   <div className="service-img">
-                    <img className="img-fluid" src={`/img/${encodeURIComponent(s.img)}`} alt={s.title} />
+                    {/* 3. Add it here too */}
+                    <img className="img-fluid" src={`${basePath}img/${encodeURIComponent(s.img)}`} alt={s.title} />
                   </div>
+                  
                   <div className="service-detail">
                     <div className="service-title">
                       <hr className="w-25" />
