@@ -21,11 +21,11 @@ export default function Services() {
                 <div className="service-item">
                   
                   {/* 2. Add basePath right before your img folder */}
-                  <img className="img-fluid" src={`${basePath}img/${encodeURIComponent(s.img)}`} alt={s.title} />
+                  <img className="img-fluid" src={`public/img/${encodeURIComponent(s.img)}`} alt={s.title} />
                   
                   <div className="service-img">
                     {/* 3. Add it here too */}
-                    <img className="img-fluid" src={`${basePath}img/${encodeURIComponent(s.img)}`} alt={s.title} />
+                    <img className="img-fluid" src={`public/img/${encodeURIComponent(s.img)}`} alt={s.title} />
                   </div>
                   
                   <div className="service-detail">
