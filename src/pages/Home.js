@@ -25,7 +25,6 @@ const aboutCards = [
 export default function Home() {
   const location = useLocation()
 
-  // Scroll to #about when arriving from another page via the nav link.
   useEffect(() => {
     if (location.state?.scrollTo) {
       const el = document.getElementById(location.state.scrollTo)
