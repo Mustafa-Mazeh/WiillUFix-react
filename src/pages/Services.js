@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { services } from '../data/content'
 
 export default function Services() {
-  // 1. Create a simple variable for your base path
   const basePath = import.meta.env.BASE_URL;
 
   return (
@@ -20,11 +19,11 @@ export default function Services() {
               <div className="col-md-6 col-lg-4" key={s.title}>
                 <div className="service-item">
                   
-                  {/* 2. Add basePath right before your img folder */}
+                
                   <img className="img-fluid" src={`public/img/${encodeURIComponent(s.img)}`} alt={s.title} />
                   
                   <div className="service-img">
-                    {/* 3. Add it here too */}
+                    
                     <img className="img-fluid" src={`public/img/${encodeURIComponent(s.img)}`} alt={s.title} />
                   </div>
                   
