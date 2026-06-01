@@ -19,9 +19,9 @@ export default function Services() {
             {services.map((s) => (
               <div className="col-md-6 col-lg-4" key={s.title}>
                 <div className="service-item">
-                  <img className="img-fluid" src={`/img/(s.img)`} alt={s.title} />
+                  <img className="img-fluid" src={`/img/{(s.img)}`} alt={s.title} />
                   <div className="service-img">
-                    <img className="img-fluid" src={`/img/(s.img)`} alt={s.title} />
+                    <img className="img-fluid" src={`/img/{(s.img)}`} alt={s.title} />
                   </div>
                   <div className="service-detail">
                     <div className="service-title">
